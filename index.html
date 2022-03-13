@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <!--Bootstrap CSS-->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+  <!--Bootstrap Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!--Fontawesome icons-->
+  <script src="https://kit.fontawesome.com/b4971a44cf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilo.css">
+    <title>Finans - Finanças Pessoais</title>
+  </head>
+  <body>
+
+    <header> <!--Inicio da tag HEADER para criação do Menu superior/barra de navegação-->
+
+      <!--A TAG NAV indica a criação de uma barra de navegação, porém ela é apenas uma indicação para acessibilidade e não possui nenhuma estrutura interna especifica. Para a criação da Barra de Navegação é necessário os passos a seguir
+      
+      - Incluir a CLass NAVBAR na TAG NAV é o que realmente criará a função de Barra de Navegação, aplicando as configurações flex nos itens-->
+      <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <!--Crição da DIV com a Class CONTAINER para criação da área de conteúdo (sem o container o conteudo ocupara tdo o espaçamento disponível na tela)-->
+        <div class="container">
+          <!--Caso exista a opção de um item de destaque na barra de navegação, como um Logo, é utilizado a class NAVBAR-BRAND, podendo ser utilizado em uma DIV ou LINK com imagem-->
+          <a class="navbar-brand href="index.html">
+            <img src="finans/img/logo.png" width=142px>
+          </a>
+          <!--Para um site responsívo é necessário a criação de um Menu retrátil quando exibido em telas menores. Para isso é necessário criar um BUTTON com a Class NAVBAR-TOGGLER que dará a função TOGGLER para o botão. 
+          
+          Após é necessário indicar o DATA-BS-TOGGLE="COLLAPSE" para indicar que o botão só aparecerá quando a tela chegar em um tamanho pequeno
+        
+          E por fim é necessário indicar o DATA-BS-TARGET="#IdDoConteudo" com o ID da div do conteudo que ficará oculto até o botão ser clicado.-->
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!--É Opcional colocar o botão Hamburguer, mas caso seja a opção, é necessário criar uma TAG SPAN com a Class NAVBAR-TOGGLER-ICON. Porém é possivel incluir apenas texto, texto + botão hamburguer, imagens, etc.-->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--APÓS O BUTTON é necessário criar o conteudo do menu/navbar que pode ser uma lista(ul) ou divs com links. E para que o conteudo colapse e fique oculto no botão ao ser exibido em telas menores é NECESSÁRIO QUE TODO O CONTEUDO ESTEJA DENTRO DE UMA DIV COM A CLASS 'COLLAPSE NAVBAR-COLLAPSE' e um ID que deverá ser o mesmo indicado no DATA-BS-TARGET incluido no BUTTON.-->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!--Ao iniciar a lista, se for utilizado a TAG UL é necessário incluir a CLASS NAVBAR-NAV para que enfim seja criado a barra de navegação.-->
+            <ul class="navbar-nav ms-auto">
+              <!--No caso da tag LI é utilizado a CLASS NAV-ITEM para indicar que é um item da lista-->
+              <li class="nav-item">
+                <!--O mesmo ocorre com o LINK utilizando a CLASS NAV LINK para indicar que é um link pertencente a barra de navegação-->
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recursos.html">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="beneficios.html">Benefícios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precos.html">Preços</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light ms-3">Entrar</button>
+          </div>
+        </div>        
+      </nav>
+      <!--Fim da barra de navegação, que pode ser formatada utilizando Margens (m-x), Paddings (p-x), inclusão de textos, formulários, pesquisa, entre outras funções. OLHAR DOCUMENTO OFICIAL PARA MAIORES INFORMAÇÕES-->
+    </header>
+
+    <!--Criação do container para delimitação da área do conteudo-->
+    <section id="home">
+      <div class="container">
+        <!--Criação do ROW para aplicação de sistema GRID no conteudo dentro da DIV-->
+        <div class="row pe-3 ps-3 p-sm-0">
+          <!--Utilizado o Col-md-6 para definir que a DIV ocupará metade do espaço disponível dentro da DIV mãe e a utilização do D-FLEX para aplicar as classes do FLEXBOX nos conteudos dentro da div.-->
+          <div class="col-md-6 d-flex"> 
+            <div class="align-self-center">
+              <h1 class="display-4 text-light">Suas contas, descomplicadas</h1>
+              <p>Usado por mais de 1 milhão de pessoas, o Finans é uma ferramenta online que vai facilitar sua vida financeira.</p>
+              <div class="input-group input-group-lg mt-4 mb-4">
+                <input class="form-control border-info" type="text" placeholder="Seu e-mail">
+                <button class="btn btn-primary " type="button">Cadastre-se</button>
+              </div>
+
+              <p class="text-light">
+                Disponível para 
+                <a class="btn btn-outline-light"><i class="fa-brands fa-apple fa-lg"></i></a>
+                <a class="btn btn-outline-light"><i class="fa-brands fa-android fa-lg"></i></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 d-none d-md-block">
+            
+              <!--PARA ALINHAR IMAGENS DENTRO DE UMA DIV USAR A CLASS 'MX' e 'D-BLOCK'-->
+              <img class="mx-auto d-block" src="finans/img/capa-mulher.png">
+          
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <section class="caixa">
+      <div class="container">
+        <div class="row pe-3 ps-3 p-sm-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <div>
+              <h2>Saiba para onde vai o seu dinheiro</h2>
+              <p>Com o Finans, você categoriza todos os seus lançamentos. Com gráficos simples, vocẽ sabe de onde vem e para onde vai o seu dinheiro.</p>
+              <button class="btn btn-primary">Veja mais</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-none d-md-block d-flex">
+            <img class="img-fluid" src="finans/img/saiba.png">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="caixa">
+      <div class="container">
+        <div class="row pe-3 ps-3 p-sm-0">
+          <div class="col-md-6 d-none d-md-block">
+            <img class="img-fluid" src="finans/img/juros.png">
+          </div>
+
+          <div class="col-md-6 d-flex">
+            <div class="align-self-center">
+              <h2>Pare de pagar juros e economize</h2>
+              <p>Manter as contas em dia é sempre um problema? O Organizze avisa você: receba alertas de contas a pagar e a receber!</p>
+              <button class="btn btn-primary">Veja mais</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container caixa">
+        <div class="row row-cols-1 row-cols-md-3">
+          
+            <div class="col col-lg-4 pe-5 ps-5 pe-sm-5 ps-sm-0"> <!--conteudo 1-->
+              <div>
+                <img src="finans/img/facil.png" class="img-fluid">
+              </div>
+              <div>
+                <h4>Facil de usar</h4>
+                <p>O Finans vai além do básico e permite que você faça controles incríveis, essenciais para suas finanças. Simples como tem que ser!</p>
+              </div>
+            </div>
+            
+            <div class="col col-lg-4 pe-5 ps-5 pe-sm-5 ps-sm-0"> <!--conteudo 2-->
+              <div>
+                <img src="finans/img/economize.png" class="img-fluid">
+              </div>
+              <div>
+                <h4>Economize seu tempo</h4>
+                <p>Tempo é dinheiro! Em segundos, você tem tudo sob controle e aproveite seu tempo com o que realmente importa pra você!</p>
+              </div>
+            </div>
+
+            <div class="col col-lg-4 pe-5 ps-5 pe-sm-5 ps-sm-0"> <!--conteudo 3-->
+              <div>
+                <img src="finans/img/suporte.png" class="img-fluid">
+              </div>
+              <div>
+                <h4>Suporte amigo</h4>
+                <p>Duvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui pra resolver seus problemas e deixar sua vida bem mais fácil!</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container caixa">
+        <div class="d-flex justify-content-evenly justify-content-sm-start">
+          <a class="link link-active" href="">Home</a>
+          <a class="link" href="">Recursos</a>
+          <a class="link" href="">Beneficios</a>
+          <a class="link" href="">Preços</a>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
